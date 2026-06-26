@@ -3,12 +3,16 @@ const { Server } = require("socket.io");
 let io;
 
 function initSocket(server) {
-  io = new Server(server, {
-    cors: {
-      origin: "http://localhost:3000",
-      credentials: true,
-    },
-  });
+io = new Server(server, {
+  cors: {
+    origin: [
+      "http://localhost:3000",
+      "https://techshare-beta.vercel.app",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
+  },
+});
 
   io.on("connection", (socket) => {
 
