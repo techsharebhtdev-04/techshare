@@ -7,7 +7,13 @@ require("dotenv").config();
 const app = express();
 const server = http.createServer(app);
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://techshare-beta.vercel.app",
+    "http://localhost:3000",
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 
 const { initSocket } = require("./socket");
