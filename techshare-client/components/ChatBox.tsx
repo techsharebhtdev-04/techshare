@@ -97,7 +97,7 @@ const scrollContainerRef = useRef<HTMLDivElement>(null);
   };
 
   useEffect(() => {
-    const newSocket = io("http://localhost:5000", {
+    const newSocket = io("https://techshare-gpve.onrender.com", {
       transports: ["websocket"],
     });
     setSocket(newSocket);
