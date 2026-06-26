@@ -59,7 +59,7 @@ export default function NotificationBell() {
   useEffect(() => {
     if (!user?.id) return;
 
-    const newSocket = io("http://localhost:5000", {
+    const newSocket = io("https://techshare-gpve.onrender.com", {
       transports: ["websocket"],
     });
     setSocket(newSocket);
