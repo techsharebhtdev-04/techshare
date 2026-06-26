@@ -5,7 +5,7 @@ let io;
 function initSocket(server) {
   io = new Server(server, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: "http://localhost:3000", "https://techshare-beta.vercel.app",
       credentials: true,
     },
   });
